@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<joy-entities>
+    
+    <!-- Management Data Access Tables -->
+    <joy-entity name="SRC_CONTEXT" />
+
+    <joy-entity name = "Available Metrics" distinct="yes">
+        <joy-field alias="AT1">MET_NAME</joy-field>
+        <joy-entity alias="AT1">DIM_METRIC</joy-entity>
+        <joy-join type="LEFT OUTER">
+            <joy-entity alias="SC1">REL_TERM_METRIC</joy-entity>
+            <joy-join-key master="MET_NAME" slave="MET_NAME" />
+        </joy-join>
+        <joy-filter alias="SC1" field="MET_NAME" operator="IS">NULL</joy-filter>
+        <joy-sort alias="AT1" desc="no">MET_NAME</joy-sort>
+    </joy-entity>
+
+    <joy-entity name = "AVAILABLE_TERMTYPES">
+        select distinct DIM_GLOSSARY.glo_name from DIM_GLOSSARY 
+        where DIM_GLOSSARY.glo_name not in (SELECT gio_termtype_name FROM "public".src_termtype)
+    </joy-entity>
+    
+</joy-entities>

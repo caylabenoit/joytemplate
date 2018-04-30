@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+for the Views or tables :
+<joy-entity name="XX" /> 
+
+for the custom queries :
+<joy-entity name="Mandatory name">
+    SQL Query
+</joy-entity>
+-->
+
+<joy-entities>
+    
+<!-- Connection Via JDBC Data Source Name -->
+    <joy-datasource>java:/comp/env/jdbc/GOVERNANCE</joy-datasource>
+<!-- Or JDBC Direct connection -->
+    <joy-jdbc-driver>org.postgresql.Driver</joy-jdbc-driver>
+    <joy-jdbc-url>jdbc:postgresql://localhost:5432/dgm</joy-jdbc-url>
+    <joy-jdbc-user>dgmX</joy-jdbc-user>
+    <joy-jdbc-pwd>dgmX</joy-jdbc-pwd>
+<!-- Connection -->
+    
+    <joy-db-plugins>
+        <joy-db-plugin name="oracle">com.joy.bo.ora.BOEntityOraclePlugin</joy-db-plugin>
+        <joy-db-plugin name="postgresql">com.joy.bo.pg.BOEntityPostgreSQLPlugin</joy-db-plugin>
+    </joy-db-plugins>
+
+    <joy-query-init>
+        <ORACLE>ALTER SESSION SET NLS_NUMERIC_CHARACTERS = ', '</ORACLE>
+    </joy-query-init>
+    
+<!-- Entity registry -->
+    <joy-registry> 
+        <!-- /entity/joy-entity-src.xml -->
+        <joy-entity name="SRC_CONTEXT" type="table" file ="/entity/joy-entity-src.xml" />
+        <joy-entity name="Available Metrics" type="composite" file ="/entity/joy-entity-src.xml" />
+        <joy-entity name="AVAILABLE_TERMTYPES" type="query" file ="/entity/joy-entity-src.xml" />
+    </joy-registry> 
+    
+</joy-entities>

@@ -1,0 +1,79 @@
+{
+  "joy-menu": "top-left",
+  "items": [
+    {
+      "id": "TL01",
+      "label": "Govern",
+      "tag": "home",
+      "glyphe": "fa fa-star fa-fw"
+    },
+    {
+      "id": "TL02",
+      "label": "Data",
+      "tag": "import",
+      "glyphe": "fa fa-th fa-fw"
+    },
+    {
+      "id": "TL03",
+      "label": "Admin",
+      "glyphe": "fa fa-unlock-alt fa-fw",
+      "items": [
+        {
+          "id": "TL04",
+          "label": "Check Application",
+          "tag": "checkapp",
+          "glyphe": "fa fa-unlock-alt fa-fw"
+        },
+        {
+          "id": "TL05",
+          "label": "Backup configuration",
+          "tag": "backupconfig",
+          "glyphe": "fa fa-unlock-alt fa-fw"
+        },
+        {
+          "id": "TL07",
+          "label": "Tasks",
+          "tag": "tasks",
+          "glyphe": "fa fa-random fa-fw"
+        }
+      ]
+    },
+    {
+      "id": "TL08",
+      "label": "Configuration",
+      "glyphe": "fa  fa-wrench fa-fw",
+      "items": [
+        {
+          "id": "TL09",
+          "label": "Quality Dimensions",
+          "tag": "configaxislist",
+          "glyphe": "fa fa-gears fa-fw"
+        },
+        {
+          "id": "TL10",
+          "label": "Contexts",
+          "tag": "",
+          "glyphe": "fa fa-gears fa-fw"
+        },
+        {
+          "id": "TL11",
+          "label": "Term Types",
+          "tag": "configtermtypelist",
+          "glyphe": "fa fa-gears fa-fw"
+        },
+        {
+          "id": "TL12",
+          "label": "Contexts and Scorecards",
+          "tag": "relsccontext",
+          "glyphe": "fa fa-gears fa-fw"
+        },
+        {
+          "id": "TL13",
+          "label": "Metrics and Terms",
+          "tag": "",
+          "glyphe": "fa fa-gears fa-fw"
+        }
+      ]
+    }
+  ]
+}

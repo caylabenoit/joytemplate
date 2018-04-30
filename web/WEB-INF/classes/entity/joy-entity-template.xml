@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+for the Views or tables :
+<joy-entity name="XX" /> 
+<joy-view name="YY" />
+
+for the custom queries :
+<joy-entity name="Mandatory name">
+    SQL Query here
+    AND/OR You can add DB specifics by using 
+        <POSTGRESQL></POSTGRESQL>
+        <ORACLE></ORACLE>
+</joy-entity>
+-->
+
+<joy-entities>
+    
+    <!-- Simple table -->
+    <joy-entity name="APP_PARAMS">
+        <joy-init-record>
+            <joy-field name="...">...</joy-field>
+            <joy-field name="...">...</joy-field>
+        </joy-init-record>
+    </joy-entity>
+     
+    <!-- Direct Query / SQL -->
+    <joy-entity name="Mandatory name">
+        <!-- SQL Query here
+        AND/OR You can add DB specifics by using 
+            <POSTGRESQL></POSTGRESQL>
+            <ORACLE></ORACLE> -->
+    </joy-entity>
+    
+    <!-- Composite object -->
+  <joy-entity name = "Composite name" distinct="yes/no">
+    <joy-entity alias="[Left Table Alias]" as="[As in Select/To rename the selected field]">...</joy-entity>
+  
+    <joy-field alias="[Table Alias for selected field]">[Left IEntity]</joy-field>
+    <joy-field ...></joy-field>
+  
+    <joy-join type="INNER/LEFT/RIGHT [Single JOIN by default]">
+        <joy-entity alias="[Right Table Alias]">[Right IEntity]</joy-entity>
+        <joy-join-key master="[Left field Key]" slave="[Right field Key]" />
+    </joy-join>
+    <joy-join type="...">
+        ...
+    </joy-join>
+  
+    <joy-filter alias="[Table Alias for filter field]" field="[Filter field]" operator="&lt;&gt;[Or anything else]">[Filter]</joy-filter>
+    <joy-filter>...</joy-filter>
+  
+    <joy-sort alias="[Alias Sort field]" desc="[no/yes]" />[sort field]</joy-sort>
+    <joy-sort ... />
+  
+    <joy-group alias="[Table Alias for grouped field]">[Group Field]</joy-group>
+    <joy-group ... />
+    
+ </joy-entity>
+    
+</joy-entities>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+3 parameter types :
+1) Joy fixed parameters
+2) Application String parameters
+    Example : <app-parameter name="test" type="value">tutu</app-parameter>
+    
+3) Application List parameters
+    Example : 
+    <app-parameter name="test2" type="list">
+        <app_parameter-value name="X">A</app_parameter-value>
+        <app_parameter-value name="Y">B</app_parameter-value>
+        <app_parameter-value name="Z">C</app_parameter-value>
+    </app-parameter>
+-->
+
+<joy-parameters>
+
+<!-- MANDATORY PARAMETERS -->
+
+    <!-- Must be equal to the url-pattern tag value in web.xml -->
+    <api-start-path>api</api-start-path>
+    
+    <!-- property file prefix for all the messages -->
+    <bundle-message>Empty</bundle-message>
+    
+    <!-- default date format -->
+    <default-dateformat>yyyy-mm-dd HH:mm:ss</default-dateformat>
+    
+    <!-- Joy Version -->
+    <joy-version>0.0.0.0</joy-version>
+    <joy-app-name>Empty</joy-app-name>
+
+    <!-- Deactive or not the mandatory login process yes/no -->
+    <no-login>yes</no-login>
+    
+    <!-- datasources/entities configuration file here-->
+    <joy-entities>
+        <joy-entity name="Governance">joy-entity.xml</joy-entity>
+    </joy-entities>
+    
+    <!-- Joy menus -->
+    <joy-menus>
+        <joy-menu name="topleft">menu/menu-top-left.json</joy-menu>
+        <joy-menu name="govern">menu/menu-govern.json</joy-menu>
+        <joy-menu name="admin">menu/menu-admin.json</joy-menu>
+        <joy-menu name="config">menu/menu-config.json</joy-menu>
+        <joy-menu name="data">menu/menu-data.json</joy-menu>
+    </joy-menus>
+    
+    <!-- Navigation configuration file -->
+    <joy-navi>navi-config.json</joy-navi>
+    
+    <!-- Joy mapping -->
+    <joy-mappings>
+        <joy-mapping name="landing">joy-mappings.xml</joy-mapping>
+    </joy-mappings>
+    
+    <joy-session-timeout>20</joy-session-timeout> <!-- in minutes -->
+    
+    <!-- locale defaults -->
+    <joy-localelanguage>en</joy-localelanguage>
+    <joy-localecountry>US</joy-localecountry>
+
+    <!-- custom application parameters -->
+    
+    <app-parameter name="simpleparameter" type="value">myValue</app-parameter>
+
+    <!-- Business Glossary available icons / image names must be located in /images/glossary -->
+    <app-parameter name="parameter list" type="list">
+        <app_parameter-value name="">1</app_parameter-value>
+        <app_parameter-value name="">2</app_parameter-value>
+    </app-parameter>
+    
+</joy-parameters>

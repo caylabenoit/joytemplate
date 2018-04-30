@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "services": [
+    {
+      "name": "task1",
+      "class": "com.dgm.tasks.load.task1"
+    }
+  ]
+}
