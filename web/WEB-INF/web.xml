@@ -17,10 +17,6 @@
         <param-value>joy-parameters.xml</param-value>
     </context-param>
     <context-param>
-        <param-name>scheduler</param-name>
-        <param-value>false</param-value>
-    </context-param>
-    <context-param>
         <param-name>joy-rest</param-name>
         <param-value>rest-config.json</param-value>
     </context-param>
@@ -58,20 +54,5 @@
         <url-pattern>/task/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
-    
-<!--    
-    <listener>
-        <listener-class>com.dgm.governance.scheduler.batchScheduler</listener-class>
-    </listener>
--->
-    <error-page>
-        <exception-type>Exception</exception-type>
-        <location>/404.jsp</location>
-    </error-page>
-    <resource-ref>
-        <description>jdbc/GOVERNANCE</description>
-        <res-ref-name>jdbc/GOVERNANCE</res-ref-name>
-        <res-type>javax.sql.DataSource</res-type>
-        <res-auth>Container</res-auth>
-    </resource-ref>
+ 
 </web-app>
