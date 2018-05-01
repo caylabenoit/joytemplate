@@ -1,2 +1,3 @@
 # joytemplate
-This repo is the template for using Joy framework
+This repo is a empty and sample for using joy framework.
+Go here for more details http://benoit.famillecayla.fr/joy/
